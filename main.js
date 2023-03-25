@@ -1,4 +1,4 @@
-const ws = new WebSocket('ws://localhost:4000')
+const ws = new WebSocket('wss://chat-prikol.onrender.com')
 const submitButton = document.querySelector('.submit_wrapper button')
 const submitInput = document.querySelector('.submit_wrapper input')
 const formWrapper = document.querySelector('.form_wrapper')
