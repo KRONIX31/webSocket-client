@@ -3,8 +3,12 @@ const submitButton = document.querySelector('.submit_wrapper button')
 const submitInput = document.querySelector('.submit_wrapper input')
 const formWrapper = document.querySelector('.form_wrapper')
 const myNicknameInput = document.querySelector('.my_nickname_wrapper input')
-myNicknameInput.value = JSON.parse(localStorage.WebSocket).nickname || ''
 const chat = document.querySelector('.chat')
+if(!localStorage.WebSocket){
+    myNicknameInput.value = ''
+} else{
+    myNicknameInput.value = JSON.parse(localStorage.WebSocket).nickname
+}
 
 
 myNicknameInput.addEventListener('change',(e)=>{
